@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ccc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+  margin-top: calc(50vh - 210px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #858484;
+  text-align: center;
+  padding: 10px;
+  min-width: 280px;
+  width: 20%;
+  transition: all 0.4s ease-in-out;
+}
+.card_img {
+  width: 80%;
+  height: 330px;
+  position: absolute;
+  left: 37px;
+  top: -30px;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.card h2 {
+  color: #555;
+  text-transform: capitalize;
+  padding: 8px 0;
+  margin-top: 300px;
+  transition: all 0.3s ease-in-out;
+}
+.card p {
+  color: #777;
+  font-size: 17px;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card_img {
+  top: -91px;
+  border-radius: 50%;
+}
+.card:hover .card_img img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px #555;
+}
+
+.card:hover p,
+.card:hover h2 {
+  transform: translateY(-50px);
+}
+
+.back {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(205 205 205);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.back a {
+  font-size: 20px;
+  color: #222;
+  margin-right: 10px;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.back a:last-of-type {
+  margin-right: 0;
+}
+.card:hover .back {
+  z-index: 1;
+  opacity: 1;
+}
+
+.back a:first-of-type:hover {
+  color: #4267b2;
+}
+.back a:nth-of-type(2):hover {
+  color: #1da1f2;
+}
+.back a:nth-of-type(3):hover {
+  color: #f56040;
+}
+.back a:last-of-type:hover {
+  color: #25d366;
+}
